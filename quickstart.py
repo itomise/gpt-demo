@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 import requests
 import json
@@ -11,7 +14,7 @@ openai.api_version = '2022-12-01' # this may change in the future
 deployment_name='gpt-35-test' #This will correspond to the custom name you chose for your deployment when you deployed a model. 
 
 
-tokenizer = openai.Tokenizer.create(engine=deployment_name)
+# tokenizer = openai.Tokenizer.create(engine=deployment_name)
 # Send a completion call to generate an answer
 print('Sending a test completion job')
 start_phrase = '日本の首都はどこですか？'
