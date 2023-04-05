@@ -9,8 +9,8 @@ import requests
 
 load_dotenv()
 openai.api_type = "azure"
-openai.api_key = os.getenv('OPEN_AI_API_KEY')
-openai.api_base = os.getenv('OPEN_AI_API_BASE')
+openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_base = os.getenv('OPENAI_API_BASE')
 openai.api_version = "2022-12-01"
 
 def create_embedding(text):
@@ -18,6 +18,7 @@ def create_embedding(text):
         input=text,
         engine="text-embedding-ada-002"
     )
+    print(response)
     return response['data'][0]['embedding']
 
 def main():

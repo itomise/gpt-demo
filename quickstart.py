@@ -6,8 +6,8 @@ import requests
 import json
 import openai
 
-openai.api_key = os.getenv('OPEN_AI_API_KEY')
-openai.api_base = os.getenv('OPEN_AI_API_BASE')
+openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_base = os.getenv('OPENAI_API_BASE')
 openai.api_type = 'azure'
 openai.api_version = '2022-12-01' # this may change in the future
 
